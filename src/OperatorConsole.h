@@ -30,8 +30,8 @@ typedef struct _pulse msg_header_t;
 //Types of messages sent from the Operator Console to the Communication System
 typedef enum {OperatorSetAirplaneSpeed, OperatorRequestAirplaneData} Msg2CommSysType;
 
-//Type of message sent from the Operator Console to the Computer System
-typedef enum {OperatorSetCalculationInterval} Msg2ComputerSysType;
+// Type of messages sent to Computer System
+typedef enum {OperatorSetCalculationInterval, AirplaneRadarUpdate, ClockTimerCompUpdate} Msg2CompSysType;
 
 
 // Format of the message sent to Communication System
@@ -47,8 +47,14 @@ typedef struct  {
 // Format of the message sent to Computer System
 typedef struct  {
 	msg_header_t hdr;
-	Msg2CommSysType type;
+	Msg2CompSysType type;
+	int id;
 	int calculationInterval;
+	double x, y, z;
+	double dx, dy, dz;
+	long timestamp;
+	bool isAirplaneEntering;
+	bool isAirplaneLeaving;
 } Msg2ComputerSys;
 
 class OperatorConsole{
