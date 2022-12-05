@@ -71,7 +71,7 @@ int main() {
 			msg2.dz = dz;
 			console1.sendMessage2CommSys(msg2);
 			break;
-/*
+
 		case 3:
 			cout<<"Changing calculation interval n:"
 			"\nPlease enter the new calculation interval n = ";
@@ -84,7 +84,7 @@ int main() {
 			msg3.calculationInterval = interval;
 			console1.sendMessage2ComputerSys(msg3);
 			break;
-*/
+
 		default:
 			cout<<"No input";
 			break;

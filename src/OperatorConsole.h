@@ -44,6 +44,7 @@ typedef struct  {
 } Msg2CommSys;
 
 
+
 // Format of the message sent to Computer System
 typedef struct  {
 	msg_header_t hdr;

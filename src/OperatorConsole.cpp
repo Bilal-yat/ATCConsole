@@ -41,14 +41,14 @@ bool OperatorConsole::sendMessage2CommSys(Msg2CommSys msg){
 	return true;
 }
 
-/*
+
 
 //Function to send commands from Operator Console to the Computer System
 bool OperatorConsole::sendMessage2ComputerSys(Msg2ComputerSys msg){
 
 	int server_coid; //server connection ID.
 
-	if ((server_coid = name_open("ComputerSysChannel", 0)) == -1) {
+	if ((server_coid = name_open("CompSysChannel", 0)) == -1) {
 		printf("Error: channel was not created");
 
 		return false;
@@ -72,5 +72,5 @@ bool OperatorConsole::sendMessage2ComputerSys(Msg2ComputerSys msg){
 	return true;
 }
 
-*/
+
 
